@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cosmic Cash | Financial Goals</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="goals.css"></head><body>
+<main class="goal-wrap"><div class="goal-phone"><div class="goal-statusbar">9:41 <span>●●● ▰</span></div><header class="goal-header"><a href="index.html" class="goal-back" aria-label="Go home">‹</a><div><small>COSMIC CASH</small><h1>Financial Goals</h1></div><span class="goal-star">✦</span></header>
+
+<div class="goal-section-heading"><h2>Goal overview</h2><span>SCRUM #13</span></div>
+
+<section class="monthly-chart-section" aria-label="Combined monthly savings and investment progress">
+  <article class="monthly-chart-card combined-chart">
+    <div class="monthly-chart-head"><div><h3>Savings &amp; Investment Progress</h3><p>Month-by-month balances toward your goals</p></div></div>
+    <div class="combined-legend"><span><i class="savings-key"></i>Savings</span><span><i class="investment-key"></i>Investments</span></div>
+    <div class="combined-chart-plot" id="combinedChart" role="img" aria-label="Grouped vertical bar chart comparing savings and investment values for June through November"></div>
+    <div class="combined-goal-labels"><span>Savings target: <b>$15,000</b></span><span>Investment target: <b>$25,000</b></span></div>
+    <p class="combined-chart-note">Purple = savings · Teal = investments. Both series share the same dollar scale for accurate comparison. Sample data only.</p>
+  </article>
+<div class="goal-section-heading"><h2>My savings goals</h2><button id="newGoal" class="new-goal">+ Add goal</button></div>
+<section id="goalCards" class="goal-cards" aria-label="Individual savings goals"></section>
+<div class="goal-note">✦ <span>Progress adds up. Small contributions move you closer to your goals.</span></div>
+<nav class="goal-nav" aria-label="App navigation"><a href="index.html"><b>⌂</b>Home</a><a class="selected" href="goals.html"><b>◎</b>Goals</a><a href="index.html#home"><b>▥</b>Insights</a><a href="index.html"><b>▤</b>More</a></nav><div class="goal-homebar"></div></div></main>
+<dialog id="goalDialog"><form id="goalForm" method="dialog"><h2>Create a savings goal</h2><label>Goal name<input name="name" maxlength="45" required placeholder="e.g. New Car"></label><label>Target amount ($)<input name="target" type="number" min="1" step="0.01" required placeholder="5000"></label><label>Amount saved ($)<input name="saved" type="number" min="0" step="0.01" required value="0"></label><p class="dialog-error" id="dialogError" role="alert"></p><div class="dialog-actions"><button type="button" id="cancelGoal">Cancel</button><button type="submit" class="submit-goal">Add goal</button></div></form></dialog>
+<p class="prototype-disclaimer">Demo values only · Goals added here are stored in this browser, not linked to financial accounts.</p><script src="goals.js"></script></body></html>

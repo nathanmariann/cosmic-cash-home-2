@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cosmic Cash mobile-first personal finance app home screen prototype">
+  <title>Cosmic Cash | Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage">
+    <div class="stage-heading">
+      <span class="eyebrow">PERSONAL FINANCE • HOME SCREEN CONCEPT</span>
+      <h1>Your money, <span>in orbit.</span></h1>
+      <p>A closer match to the mobile home-page layout in your planning PDF.</p>
+    </div>
+
+    <section class="phone" aria-label="Cosmic Cash app home screen">
+      <div class="phone-screen">
+        <div class="status-bar"><span>9:41</span><span class="status-symbols">▮▮▮ ◉ ▰</span></div>
+
+        <header class="app-header">
+          <a class="brand" href="#home" aria-label="Cosmic Cash home">
+            <span class="saturn-logo" aria-hidden="true"><i></i></span>
+            <span>Cosmic Cash</span>
+          </a>
+          <div class="header-actions">
+            <button class="header-icon has-alert" id="notificationsButton" aria-label="Notifications" title="Notifications">♧<i></i></button>
+            <button class="header-icon" id="settingsButton" aria-label="Account and settings" title="Account and settings">⚙</button>
+          </div>
+        </header>
+
+        <section class="balance-card" id="home">
+          <div class="balance-top"><span>Total Balance</span><button class="arrow-button" data-feature="Account & Updates" data-story="SCRUM #16 · SPRINT 1" aria-label="Open account details">›</button></div>
+          <div class="balance-amount">$47,000</div>
+          <div class="balance-foot"><span class="balance-caption">Across your linked accounts</span><span class="balance-planet" aria-hidden="true"></span></div>
+        </section>
+
+        <nav class="quick-actions" aria-label="Quick actions">
+          <button class="quick-action" data-feature="Credit Score" data-story="SCRUM #23 · SPRINT TBA">
+            <span class="action-icon credit-gauge"><span class="gauge-arc"></span><b>742</b></span><span>Add Money<br>Credit</span>
+          </button>
+          <button class="quick-action" data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT TBA">
+            <span class="action-icon"><svg viewBox="0 0 24 24"><path d="M4 11.5 12 4l8 7.5M6.5 10v9h11v-9M10 19v-5h4v5"/></svg></span><span>Pay<br>Bills</span>
+          </button>
+          <button class="quick-action" data-feature="Transfer Money" data-story="SCRUM #TBD · SPRINT TBA">
+            <span class="action-icon"><svg viewBox="0 0 24 24"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg></span><span>Transfer<br>Money</span>
+          </button>
+          <button class="quick-action" data-feature="Card Controls" data-story="SCRUM #20 / #31 · SPRINT TBA">
+            <span class="action-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18m-14 5h4"/></svg></span><span>Cards</span>
+          </button>
+          <button class="quick-action" data-feature="Savings & Round Up" data-story="SCRUM #28 · SPRINT TBA">
+            <span class="action-icon"><svg viewBox="0 0 24 24"><path d="M5 10.5c0-2.5 2.2-4.5 5-4.5h4.5c2.5 0 4.5 1.8 4.5 4.2v5.1c0 1.5-1.2 2.7-2.7 2.7H8c-1.7 0-3-1.3-3-3z"/><path d="M5 11H3.8a1.8 1.8 0 0 0 0 3.6H5m14-3h1a1.5 1.5 0 0 1 0 3h-1M9 6V4.5m5 .5V3.5m-4 8.2h.01m4 0h.01M12 14v1.5"/><circle cx="18.5" cy="5" r="2.2"/><path d="M18.5 3.8v2.4m-1.2-1.2h2.4"/></svg></span><span>Savings</span>
+          </button>
+          <button class="quick-action" data-feature="Disposable Income Budget" data-story="SCRUM #25 · SPRINT 2">
+            <span class="action-icon"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18m-14 6h4"/><circle cx="16.5" cy="14" r="2.2"/><path d="M16.5 12.8v2.4m-1.2-1.2h2.4"/></svg></span><span>Budget</span>
+          </button>
+        </nav>
+
+        <section class="summary-grid" aria-label="Monthly income and expenses">
+          <button class="summary-card income-card" data-feature="Cumulative Income" data-story="SCRUM #19 · SPRINT 2">
+            <span class="summary-label">This Month's<br>Income</span>
+            <span class="summary-bottom"><strong>$4,200</strong><span class="mini-chart up">↗</span></span>
+          </button>
+          <button class="summary-card expense-card" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 2">
+            <span class="summary-label">This Month's<br>Expenses</span>
+            <span class="summary-bottom"><strong>$2,800</strong><span class="mini-chart down">↘</span></span>
+          </button>
+        </section>
+
+        <section class="analytics-card">
+          <button class="analytics-heading" data-feature="Income vs Expenses Analytics" data-story="SCRUM #17 · SPRINT 1">
+            <span class="analytics-title"><span class="bars-icon">▥</span>Income vs Expenses</span><span class="analytics-arrow">›</span>
+          </button>
+          <div class="chart-legend"><span><i class="legend-income"></i>Income</span><span><i class="legend-expense"></i>Expenses</span></div>
+          <div class="chart" aria-label="Bar chart showing income and expenses from January through April">
+            <div class="chart-month"><div class="bar-pair"><i style="height:47px"></i><i style="height:29px"></i></div><span>Jan</span></div>
+            <div class="chart-month"><div class="bar-pair"><i style="height:56px"></i><i style="height:38px"></i></div><span>Feb</span></div>
+            <div class="chart-month"><div class="bar-pair"><i style="height:61px"></i><i style="height:43px"></i></div><span>Mar</span></div>
+            <div class="chart-month"><div class="bar-pair"><i style="height:54px"></i><i style="height:34px"></i></div><span>Apr</span></div>
+          </div>
+        </section>
+
+        <nav class="bottom-nav" aria-label="Main navigation">
+          <button class="bottom-item active" id="homeNav"><span class="bottom-icon">⌂</span><span>Home</span></button>
+          <a class="bottom-item" href="goals.html"><span class="bottom-icon">◎</span><span>Goals</span></a>
+          <button class="bottom-item" data-feature="Investments & Analytics" data-story="SCRUM #14 · SPRINT 1"><span class="bottom-icon">▥</span><span>Insights</span></button>
+          <button class="bottom-item" id="moreButton"><span class="bottom-icon">▤</span><span>More</span></button>
+        </nav>
+        <button class="lock-button" id="lockButton" aria-label="Lock app" title="Lock app">🔒</button>
+        <div class="home-indicator"></div>
+      </div>
+    </section>
+
+    <section class="feature-index">
+      <div class="index-heading"><div><span class="eyebrow">MAPPED TO YOUR SCRUM PLAN</span><h2>Features behind the home screen</h2></div><span class="prototype-label">PROTOTYPE</span></div>
+      <div class="feature-columns">
+        <article class="feature-group">
+          <h3>Account &amp; updates</h3>
+          <button data-feature="App Notification Center" data-story="SCRUM #21 · SPRINT 2">SCRUM #21 · App Notification Center</button>
+          <button data-feature="Bill Due Date Reminders" data-story="SCRUM #24 · SPRINT TBA">SCRUM #24 · Bill due date reminders</button>
+          <button data-feature="Spending Limit Alerts" data-story="SCRUM #26 · SPRINT TBA">SCRUM #26 · Spending limit alerts</button>
+          <button data-feature="Debt Risk Alerts" data-story="SCRUM #32 · SPRINT TBA">SCRUM #32 · Debt risk alerts</button>
+        </article>
+        <article class="feature-group">
+          <h3>Security &amp; cards</h3>
+          <button data-feature="Security & 2FA Authentication" data-story="SCRUM #12 · SPRINT 1">SCRUM #12 · Security &amp; 2FA</button>
+          <button data-feature="VPN Secure Data Transfer" data-story="SCRUM #15 · SPRINT 1">SCRUM #15 · VPN secure data transfer</button>
+          <button data-feature="Database Management" data-story="SCRUM #38 · SPRINT 1">SCRUM #38 · Database management</button>
+          <button data-feature="Credit Card Account Linking" data-story="SCRUM #40 · SPRINT TBA">SCRUM #40 · Credit card account linking</button>
+          <button data-feature="Freeze & Unfreeze Credit" data-story="SCRUM #29 · SPRINT TBA">SCRUM #29 · Freeze / unfreeze credit</button>
+        </article>
+        <article class="feature-group">
+          <h3>Investments &amp; goals</h3>
+          <button data-feature="Investment Accounts" data-story="SCRUM #14 · SPRINT 1">SCRUM #14 · Investment accounts</button>
+          <button data-feature="Investment AI Tool" data-story="SCRUM #33 · SPRINT TBA">SCRUM #33 · Investment AI tool</button>
+          <button data-feature="Annual Performance History" data-story="SCRUM #36 · SPRINT TBA">SCRUM #36 · Annual performance history</button>
+          <button data-feature="Financial Goal Setting" data-story="SCRUM #13 · SPRINT 2">SCRUM #13 · Financial goal setting</button>
+          <button data-feature="Savings & Round Up" data-story="SCRUM #28 · SPRINT TBA">SCRUM #28 · Savings &amp; round up</button>
+        </article>
+        <article class="feature-group">
+          <h3>Money tools</h3>
+          <button data-feature="Disposable Income Budget" data-story="SCRUM #25 · SPRINT 2">SCRUM #25 · Disposable income budget</button>
+          <button data-feature="Authorized Card Transactions" data-story="SCRUM #20 · SPRINT TBA">SCRUM #20 · Authorized card transactions</button>
+          <button data-feature="Turn Cards On or Off" data-story="SCRUM #31 · SPRINT TBA">SCRUM #31 · Turn cards on or off</button>
+          <button data-feature="Financial Knowledge Base" data-story="SCRUM #30 · SPRINT 2">SCRUM #30 · Financial knowledge base</button>
+          <button data-feature="Audits & Analytics" data-story="SCRUM #41 · SPRINT TBA">SCRUM #41 · Audits &amp; analytics</button>
+        </article>
+        <article class="feature-group">
+          <h3>More &amp; support</h3>
+          <button data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT TBA">SCRUM #22 · Direct bill pay</button>
+          <button data-feature="Best Price Finder" data-story="SCRUM #34 · SPRINT TBA">SCRUM #34 · Best price finder</button>
+          <button data-feature="Fetch Price via APIs" data-story="SCRUM #37 · SPRINT TBA">SCRUM #37 · Fetch price via APIs</button>
+          <button data-feature="Shopping Planner" data-story="SCRUM #35 · SPRINT TBA">SCRUM #35 · Shopping planner</button>
+          <button data-feature="Save Receipts & Invoices" data-story="SCRUM #27 · SPRINT TBA">SCRUM #27 · Save receipts &amp; invoices</button>
+          <button data-feature="Tech Support" data-story="SCRUM #39 · SPRINT TBA">SCRUM #39 · Tech support</button>
+        </article>
+      </div>
+      <p class="note">Displayed balances and chart values are sample data for layout demonstration only. Secure transfer, account linking, payments, and credit actions are not connected.</p>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <span class="eyebrow" id="modalStory">FEATURE PREVIEW</span>
+      <h2 id="modalTitle">Feature</h2>
+      <p id="modalDescription">This is a home-page prototype. The selected feature has not been connected yet.</p>
+      <button class="modal-confirm" id="modalOkay">Got it</button>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
