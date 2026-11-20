@@ -1,5 +1,5 @@
 *{box-sizing:border-box}
-:root{--ink:#171936;--muted:#747895;--purple:#6e55d9;--purple-dark:#4930b5;--lavender:#a99aff;--pale:#f6f4ff;--line:#e8e5f4;--green:#36a987;--shadow:0 24px 70px rgba(51,40,115,.17)}
+:root{--ink:#171936;--muted:#747895;--purple:#6e55d9;--purple-dark:#4930b5;--lavender:#a99aff;--pale:#f6f4ff;--line:#e8e5f4;--green:#36a987;--shadow:0 24px 70px rgba(51,40,115,.17);--app-width:390px;--app-surface:#fbfaff;--app-accent:#6e55d9}
 html{scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at 50% 5%,#f0edff 0,#faf9ff 38%,#f6f7fc 100%);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
 button{font:inherit}
@@ -9,7 +9,7 @@ button{font:inherit}
 .stage-heading h1{font:800 clamp(27px,4vw,38px) Manrope,sans-serif;letter-spacing:-1.2px;margin:8px 0 5px}
 .stage-heading h1 span{color:var(--purple)}
 .stage-heading p{font-size:13px;color:var(--muted);margin:0}
-.phone{width: min(390px,100%);margin:0 auto;padding:9px;border-radius:43px;background:linear-gradient(145deg,#fff,#d9d5eb);box-shadow:0 0 0 1px #d4d0e5,0 0 0 5px rgba(255,255,255,.8),var(--shadow)}
+.phone{width: min(var(--app-width),100%);margin:0 auto;padding:9px;border-radius:43px;background:linear-gradient(145deg,#fff,#d9d5eb);box-shadow:0 0 0 1px #d4d0e5,0 0 0 5px rgba(255,255,255,.8),var(--shadow)}
 .phone-screen{position:relative;overflow:hidden;min-height:790px;border-radius:35px;background:#fbfaff;padding:0 16px 26px}
 .status-bar{height:31px;display:flex;align-items:center;justify-content:space-between;padding:0 10px;font-size:11px;font-weight:800;color:#252344}
 .status-symbols{font-size:10px;letter-spacing:2px}
@@ -91,3 +91,149 @@ button{font:inherit}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 
 .bottom-nav a.bottom-item{text-decoration:none}
+
+/* Master palette — shared with the Goals page */
+:root {
+  --app-width:390px; --purple:#654ac7; --purple-dark:#4930b5;
+  --lavender:#b7a9f3; --teal:#20a9a5; --app-surface:#fbfaff;
+}
+.saturn-logo {width:49px;height:43px;display:flex;align-items:center;justify-content:center;}
+.saturn-logo::before,.saturn-logo::after,.saturn-logo i {display:none;}
+.saturn-art {display:block;width:49px;height:43px;object-fit:contain;}
+.chart-legend {flex-wrap:wrap;gap:5px 10px;justify-content:flex-end;font-size:8px;}
+.legend-income {background:var(--purple);}
+.legend-expense {background:var(--lavender);}
+.legend-investment {background:var(--teal);}
+.bar-pair {gap:4px;}
+.bar-pair i {width:12px;background:linear-gradient(180deg,#826be3,var(--purple));}
+.bar-pair i + i {background:linear-gradient(180deg,#d4c9fa,var(--lavender));}
+.bar-pair i.investment-bar {background:linear-gradient(180deg,#72d5cc,var(--teal));}
+
+/* Home design v1.2 — consistent iconography and four-action row */
+.status-symbols{display:flex;align-items:center;gap:7px;letter-spacing:normal}
+.signal-icon{height:13px;display:flex;align-items:end;gap:2px}
+.signal-icon i{display:block;width:3px;background:#252344;border-radius:1px}
+.signal-icon i:nth-child(1){height:4px}.signal-icon i:nth-child(2){height:7px}.signal-icon i:nth-child(3){height:10px}.signal-icon i:nth-child(4){height:13px}
+.wifi-icon{width:16px;height:12px;position:relative;background:currentColor;clip-path:polygon(0 25%,15% 10%,35% 0,65% 0,85% 10%,100% 25%,50% 100%)}
+.battery-icon{display:inline-flex;width:24px;height:12px;border:1.7px solid #252344;border-radius:3px;padding:2px;position:relative}
+.battery-icon::after{content:"";position:absolute;right:-4px;top:3px;width:2px;height:4px;background:#252344;border-radius:0 2px 2px 0}
+.battery-icon i{width:100%;background:#252344;border-radius:1px}
+.header-icon svg{width:23px;height:23px;vertical-align:middle;stroke-width:2.2}
+.balance-top{font-size:13px}.balance-links{display:flex;align-items:center;gap:7px;position:relative;z-index:2}
+.balance-links button{border:1px solid #ffffff66;background:#ffffff1a;color:#fff;border-radius:9px;padding:3px 8px;font-size:10px;cursor:pointer}
+.balance-links button:hover{background:#ffffff35}
+.balance-foot{align-items:center}.balance-caption{display:none}
+.quick-actions{grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;padding:19px 0 18px}
+.quick-action{gap:7px;font-size:10px}.action-icon{width:50px;height:50px;color:var(--purple)}
+.credit-score{background:#f0ecff;box-shadow:inset 0 0 0 2px #dcd3ff,0 3px 12px #322a6417}
+.credit-score b{font:800 17px Manrope,sans-serif;color:var(--purple-dark)}
+.analytics-title{font-size:11px;letter-spacing:-.25px}.chart-legend{font-size:8px}
+.bottom-nav{bottom:13px;height:65px;padding:5px 7px 0}
+.bottom-item{color:var(--purple);font-size:10px;gap:3px;text-decoration:none}
+.bottom-item svg{width:27px;height:27px;stroke:var(--purple);stroke-width:2;flex:none}
+.bottom-item:hover,.bottom-item:focus-visible{color:var(--purple-dark)}
+.bottom-item:focus-visible,.balance-links button:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.lock-nav svg{stroke-width:2.4;fill:#6e55d91a}
+.lock-screen[hidden]{display:none}
+.lock-screen{position:absolute;inset:0;z-index:12;background:linear-gradient(145deg,#39248d,#7656d4);display:grid;place-items:center;padding:24px;color:#fff;text-align:center}
+.lock-panel img{width:95px;height:95px;object-fit:contain}.lock-panel h2{font:800 22px Manrope,sans-serif;margin:12px 0}.lock-panel p{font-size:13px;opacity:.9}
+.lock-panel button{margin:18px auto 12px;background:#fff;color:var(--purple-dark);border:0;border-radius:12px;padding:12px 24px;font-weight:800;cursor:pointer}
+.lock-panel small{display:block;font-size:10px;opacity:.7}
+@media(max-width:370px){.action-icon{width:43px;height:43px}.quick-action{font-size:9px}.analytics-title{font-size:10px}}
+
+/* v1.3 — use available vertical space without changing the phone footprint */
+.summary-card{min-height:112px;padding:15px 13px;display:flex;flex-direction:column;justify-content:space-between}
+.summary-label{font-size:12px}
+.summary-bottom strong{font-size:22px}
+.mini-chart{font-size:31px;line-height:27px}
+.analytics-card{padding:15px 13px 14px}
+.chart{height:163px;padding-top:8px}
+.bar-pair{height:131px}
+@media(max-width:370px){.summary-card{min-height:104px}.chart{height:151px}.bar-pair{height:119px}}
+
+/* Shopping navigation icon matches the Cosmic Cash purple icon set. */
+.bottom-icon svg{display:block;width:25px;height:25px}
+
+/* v1.5 — legibility and balance-card action sizing */
+.balance-links{flex:1;justify-content:space-evenly;gap:10px;max-width:260px}
+.balance-links button{flex:1;min-width:0;padding:7px 12px;font-size:12px;font-weight:700}
+.balance-links>span{display:none}
+#modalStory{display:block;white-space:pre-line;font-size:12px;line-height:1.65;letter-spacing:.35px}
+.stage-heading p{font-size:14px}
+.balance-top{font-size:14px}
+.quick-action{font-size:12px}
+.summary-label{font-size:13px}
+.analytics-title{font-size:12px}
+.chart-legend{font-size:10px}
+.bottom-item{font-size:11px}
+.feature-group button{font-size:12px}
+.feature-group h3{font-size:14px}
+.note{font-size:12px}
+.modal p{font-size:14px}
+@media(max-width:600px){.stage-heading p{font-size:12px}.feature-group button{font-size:11px}}
+@media(max-width:370px){.quick-action{font-size:10px}.analytics-title{font-size:11px}.balance-links button{font-size:11px;padding:6px 8px}}
+
+/* v1.6 — larger, readable typography without changing the approved phone frame */
+.phone-screen { font-size: 15px; }
+.brand { font-size: 19px; }
+.balance-top { font-size: 16px; line-height: 1.3; }
+.balance-amount { font-size: 38px; }
+.balance-links button { font-size: 14px; font-weight: 800; padding: 8px 10px; }
+.quick-action { font-size: 14px; font-weight: 800; line-height: 1.25; }
+.summary-label { font-size: 15px; font-weight: 700; line-height: 1.3; }
+.summary-bottom strong { font-size: 24px; }
+.analytics-card { padding: 15px 12px 13px; }
+.analytics-heading { align-items: flex-start; gap: 5px; }
+.analytics-title { font-size: 15px; line-height: 1.3; letter-spacing: 0; text-align: left; }
+.bars-icon { flex: none; font-size: 20px; }
+.analytics-arrow { flex: none; }
+.chart-legend { justify-content: flex-start; gap: 7px 11px; font-size: 12px; font-weight: 700; line-height: 1.3; margin-top: 10px; }
+.chart-legend span { gap: 5px; white-space: nowrap; }
+.chart-legend i { width: 10px; height: 10px; flex: none; }
+.chart { height: 156px; }
+.chart-month { font-size: 12px; font-weight: 700; min-width: 0; }
+.bottom-item { font-size: 13px; font-weight: 700; }
+.feature-group h3 { font-size: 16px; }
+.feature-group button { font-size: 14px; line-height: 1.4; }
+.index-heading h2 { font-size: 25px; }
+.modal h2 { font-size: 24px; }
+.modal p { font-size: 16px; }
+#modalStory { font-size: 14px; }
+@media(max-width:370px) {
+ .quick-action { font-size: 12px; }
+ .analytics-title { font-size: 14px; }
+ .chart-legend { font-size: 11px; gap: 6px 8px; }
+ .bottom-item { font-size: 12px; }
+ .balance-links button { font-size: 12px; }
+ .chart { height: 145px; }
+}
+
+
+/* v2.1 — consistent crisp flat device frame across every page. */
+.phone, .goal-phone, .auth-phone {
+  background:#fbfaff;
+  border:9px solid #29243a;
+  border-radius:43px;
+  box-shadow:0 0 0 2px #100e19, 0 0 0 4px #6e687d, 0 12px 30px rgba(24,18,46,.19);
+}
+.phone {padding:0;}
+.phone-screen {border-radius:33px;}
+/* Shared status symbols; identical to the Home page, no placeholder glyphs. */
+.status-symbols{display:flex;align-items:center;gap:7px;letter-spacing:normal;color:#252344}
+.signal-icon{height:13px;display:flex;align-items:end;gap:2px}
+.signal-icon i{display:block;width:3px;background:#252344;border-radius:1px}
+.signal-icon i:nth-child(1){height:4px}.signal-icon i:nth-child(2){height:7px}.signal-icon i:nth-child(3){height:10px}.signal-icon i:nth-child(4){height:13px}
+.wifi-icon{width:16px;height:12px;position:relative;background:#252344;clip-path:polygon(0 25%,15% 10%,35% 0,65% 0,85% 10%,100% 25%,50% 100%)}
+.battery-icon{display:inline-flex;width:24px;height:12px;border:1.7px solid #252344;border-radius:3px;padding:2px;position:relative}
+.battery-icon::after{content:"";position:absolute;right:-4px;top:3px;width:2px;height:4px;background:#252344;border-radius:0 2px 2px 0}
+.battery-icon i{width:100%;background:#252344;border-radius:1px}
+@media(max-width:600px){.phone,.goal-phone,.auth-phone{border-width:6px;border-radius:37px}.phone-screen{border-radius:31px}}
+
+/* v2.2: The lock overlay retains a visible phone status bar. */
+.lock-statusbar{position:absolute;top:0;left:0;right:0;height:31px;display:flex;align-items:center;justify-content:space-between;padding:0 26px;font-size:12px;font-weight:800;color:#fff;z-index:1;}
+.lock-statusbar .status-symbols{color:#fff;}
+.lock-statusbar .signal-icon i{background:currentColor;}
+.lock-statusbar .wifi-icon{border-color:currentColor;}
+.lock-statusbar .wifi-icon::before,.lock-statusbar .wifi-icon::after{border-color:currentColor;}
+.lock-statusbar .battery-icon{border-color:currentColor;}
+.lock-statusbar .battery-icon i{background:currentColor;}

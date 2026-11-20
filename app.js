@@ -13,30 +13,51 @@ function showToast(message) {
 
 function openFeature(name, story) {
   modalTitle.textContent = name;
-  modalStory.textContent = story || "FEATURE PREVIEW";
+  modalStory.textContent = (story || "FEATURE PREVIEW").replaceAll(" | ", "\n");
   modal.querySelector("#modalDescription").textContent =
     "This is part of the Cosmic Cash home-page concept. The screen layout is a visual prototype; this feature is not connected to a bank, payment network, credit bureau, or live financial data.";
   modal.hidden = false;
 }
 
 document.querySelectorAll("[data-feature]").forEach(button => {
-  button.addEventListener("click", () => openFeature(button.dataset.feature, button.dataset.story));
+  button.addEventListener("click", () => {
+    if (button.id === "billPayNav") { window.location.href = "bills.html"; return; }
+    if (button.id === "cardsNav") { window.location.href = "authorizations.html"; return; }
+    openFeature(button.dataset.feature, button.dataset.story);
+  });
 });
 
 document.getElementById("notificationsButton").addEventListener("click", () =>
-  openFeature("App Notification Center", "SCRUM #21 · SPRINT 2"));
+  openFeature("App Notification Center", "SCRUM #21 · SPRINT 2 | SCRUM #24 · SPRINT 4 | SCRUM #26 · SPRINT 2 | SCRUM #32 · SPRINT 3"));
 document.getElementById("settingsButton").addEventListener("click", () =>
-  openFeature("Account & Updates", "SCRUM #16 · SPRINT 1"));
-document.getElementById("moreButton").addEventListener("click", () =>
-  showToast("More features are listed below the app screen."));
-document.getElementById("homeNav").addEventListener("click", () => {
-  document.getElementById("home").scrollIntoView({behavior:"smooth"});
-  showToast("You're on the Home screen.");
+  openFeature("Account & Updates", "SCRUM #16 · SPRINT 1 | SCRUM #12 · SPRINT 1 | SCRUM #15 · SPRINT 1 | SCRUM #38 · SPRINT 1 | SCRUM #39 · SPRINT 4"));
+document.getElementById("shoppingButton").addEventListener("click", () =>
+  openFeature("Shopping Planner", "SCRUM #35 · SPRINT 3 | SCRUM #34 · SPRINT 3 | SCRUM #37 · SPRINT 3 | SCRUM #27 · SPRINT 4"));
+document.getElementById("saturnButton").addEventListener("click", event => {
+  event.preventDefault();
+  openFeature("Cosmic Cash / Saturn", "SCRUM #40 · SPRINT 4 | SCRUM #64 · SPRINT 4");
 });
-document.getElementById("lockButton").addEventListener("click", () =>
-  openFeature("App Lock", "SCRUM #TBD · HOME / LOCK"));
+const lockScreen = document.getElementById("lockScreen");
+const lockNav = document.getElementById("lockNav");
+const unlockButton = document.getElementById("unlockButton");
+let lockAfterPopup = false;
+lockNav.addEventListener("click", () => {
+  lockAfterPopup = true;
+  openFeature("Lock App", "SCRUM #63 · SPRINT 3");
+});
+unlockButton.addEventListener("click", () => {
+  lockScreen.hidden = true;
+  lockNav.focus();
+});
 
-function closeModal() { modal.hidden = true; }
+function closeModal() {
+  modal.hidden = true;
+  if (lockAfterPopup) {
+    lockAfterPopup = false;
+    lockScreen.hidden = false;
+    unlockButton.focus();
+  }
+}
 document.getElementById("modalClose").addEventListener("click", closeModal);
 document.getElementById("modalOkay").addEventListener("click", closeModal);
 modal.addEventListener("click", event => { if (event.target === modal) closeModal(); });
