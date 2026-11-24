@@ -243,3 +243,9 @@ button{font:inherit}
 .chart-legend .legend-button { display:flex; flex:1; align-items:center; justify-content:center; gap:4px; min-width:0; border:1px solid #e5def5; border-radius:7px; padding:3px 2px; background:#f8f6fd; color:#352657; font:inherit; text-decoration:none; white-space:nowrap; cursor:pointer; }
 .chart-legend .legend-button:hover { background:#eee7fc; border-color:#a995df; }
 .chart-legend .legend-button:focus-visible { outline:2px solid #6541c5; outline-offset:2px; }
+
+/* Direct links in the Scrum development directory */
+.feature-group button[data-route]{color:#563fbe;font-weight:600;position:relative;padding-right:16px}
+.feature-group button[data-route]::after{content:'›';position:absolute;right:2px;top:8px}
+.feature-group button[data-route]:hover{text-decoration:underline}
+.feature-group button:focus-visible{outline:2px solid #6540c9;outline-offset:2px}

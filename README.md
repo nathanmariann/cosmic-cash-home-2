@@ -129,3 +129,55 @@ SCRUM #17 Sprint 1: financial overview (overview.html), linked from Home graph h
 
 ## v3.0
 SCRUM #33 Sprint 4: Investments placeholder. SCRUM #14 Sprint 1: demo institution search, manual entry and local account nicknames. No actual institution connection or credentials. Original team slide included as snapshot.
+
+## v3.2
+Settings (SCRUM #12, Sprint 1): demo security alerts, update history, saved preferences, horizontal settings tabs and original wireframe. Home gear opens settings.html.
+
+## v3.3
+Added an additional original Expenses wireframe to the left of the working SCRUM #18 page. Existing snapshots and application functionality preserved.
+
+## v3.4 — SCRUM #38
+Database MGMT settings tab uses fictional local records and simulated sync. Set DEVELOPMENT_BUILD=false in scripts/database.js to hide the tab in a user build. This is a presentation flag, not access control; production requires server-side authorization and removal of developer tools from public builds.
+
+
+## v3.5
+Added the original SCRUM #38 database management PowerPoint slide as a clickable design evolution image beside Settings, visible in development builds only.
+
+## v3.6 — Notification Center
+SCRUM #21 Sprint 2: Home bell opens notifications.html. Sample alerts, category filters, persistent read status and placeholders for #24, #26 and #32.
+
+### v3.7 — Best Price Finder
+SCRUM #34 Sprint 3: Shopping Planner links to price-finder.html. Sample offers, sorting, deal previews, SCRUM #37 placeholder, and original team design snapshot. No live retailer integration.
+
+## v3.8 — Account Login (SCRUM #16)
+Settings Account Login tab includes demo login/logout, password visibility, future provider and registration placeholders, and original wireframe. No credentials stored or real authentication. Direct preview: settings.html#account-login. Home remains the default development entry point.
+
+## v3.9 — Disposable Income Budget
+SCRUM #25 Sprint 2: Home Budget opens budget.html. Editable allocation, live 50/30/20 breakdown, discretionary spending, remaining balance, local demo save, and original team snapshots.
+
+## v4.0 — Credit Score and Credit Freeze
+Home Credit icon opens credit.html (SCRUM #23 Sprint 4; SCRUM #29 Sprint 3). Sample bureau scores, history, factors and simulated per-bureau freeze controls. Original design preserved.
+
+## v4.1 — SCRUM #31 Sprint 3
+Card Authorizations links to card-lock.html. Demo credit/debit card locks, sample history and linking are local only. Original wireframe retained.
+
+## v4.2 — SCRUM #30 · Sprint 2
+Financial Insights and Knowledge Base: date filters, sample cash flow analysis, searchable educational article previews, original team wireframe, and SCRUM #41 placeholder. Home Insights links to insights.html.
+
+## v4.3 — Design evolution
+Shared responsive history layout on all 18 pages. Added original Home, Shopping and Transfer artwork. Missing original artwork: Card Authorizations, Direct Bill Pay, Notification Center, and the pending Investments dashboard. No demo logic changed.
+
+### v4.4 — Scrum development directory
+Home feature index opens implemented pages directly, including Settings tabs and the demo lock screen. Unimplemented features retain preview dialogs.
+
+## v4.5
+SCRUM #32 Sprint 3: Debt Risk Alerts, linked from Notification Center and Home SCRUM directory. Demo thresholds, saved preferences, payoff estimate and original design snapshot.
+
+## v4.6 — SCRUM #26 · Sprint 2
+Spending Limit Alerts: category spending, supporting sample transactions, monthly trend chart, editable limits and alert thresholds. Linked from Notifications and Home SCRUM directory. Original team artwork included. Demo only.
+
+### v4.7 — SCRUM #38
+Updated backend web server design displayed beside the Database MGMT developer tab; original wireframe retained. Local demo metrics are distinct from server design figures. No live server connection.
+
+## v4.8
+Updated SCRUM 33 account overview and SCRUM 14 linking flow; original and updated team designs retained. Sample balances and linking are simulated.

@@ -21,6 +21,13 @@ function openFeature(name, story) {
 
 document.querySelectorAll("[data-feature]").forEach(button => {
   button.addEventListener("click", () => {
+    if (button.dataset.route) {
+      if (button.dataset.route === "lock") { lockNav.scrollIntoView({block: "center"}); lockScreen.hidden = false; unlockButton.focus(); }
+      else window.location.href = button.dataset.route;
+      return;
+    }
+    if (button.dataset.feature === "Credit Score" && button.classList.contains("quick-action")) { window.location.href = "credit.html"; return; }
+    if (button.dataset.feature === "Disposable Income Budget") { window.location.href = "budget.html"; return; }
     if (["Cumulative Expenses", "Expenses"].includes(button.dataset.feature)) { window.location.href = "expenses.html"; return; }
     if (button.classList.contains("analytics-heading")) { window.location.href = "overview.html"; return; }
     if (button.dataset.feature === "Cumulative Income") { window.location.href = "income.html"; return; }
@@ -31,10 +38,8 @@ document.querySelectorAll("[data-feature]").forEach(button => {
   });
 });
 
-document.getElementById("notificationsButton").addEventListener("click", () =>
-  openFeature("App Notification Center", "SCRUM #21 · SPRINT 2 | SCRUM #24 · SPRINT 4 | SCRUM #26 · SPRINT 2 | SCRUM #32 · SPRINT 3"));
-document.getElementById("settingsButton").addEventListener("click", () =>
-  openFeature("Account & Updates", "SCRUM #16 · SPRINT 1 | SCRUM #12 · SPRINT 1 | SCRUM #15 · SPRINT 1 | SCRUM #38 · SPRINT 1 | SCRUM #39 · SPRINT 4"));
+document.getElementById("notificationsButton").addEventListener("click", () => { window.location.href = "notifications.html"; });
+document.getElementById("settingsButton").addEventListener("click", () => { window.location.href = "settings.html"; });
 document.getElementById("shoppingButton").addEventListener("click", () => { window.location.href = "shopping.html"; });
 document.getElementById("saturnButton").addEventListener("click", event => {
   event.preventDefault();

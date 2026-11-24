@@ -12,6 +12,7 @@
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="styles/styles.css" rel="stylesheet"/>
+<link href="styles/design-history.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="stage">
@@ -29,7 +30,7 @@
      A closer match to the mobile home-page layout in your planning PDF.
     </p>
 </div>
-<section aria-label="Cosmic Cash app home screen" class="phone">
+<div class="home-history-layout"><section aria-label="Cosmic Cash app home screen" class="phone">
 <div class="phone-screen">
 <div class="status-bar">
 <span>
@@ -74,7 +75,7 @@
 <span class="action-icon credit-score"><b>742</b></span>
 <span>Credit</span>
 </button>
-<button class="quick-action" id="billPayNav" data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT 3">
+<button class="quick-action" data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT 3" id="billPayNav">
 <span class="action-icon">
 <svg viewbox="0 0 24 24">
 <path d="M4 11.5 12 4l8 7.5M6.5 10v9h11v-9M10 19v-5h4v5">
@@ -100,7 +101,7 @@
         Money
        </span>
 </button>
-<button class="quick-action" id="cardsNav" data-feature="Card Controls" data-story="SCRUM #20 · SPRINT 3 | SCRUM #31 · SPRINT 3">
+<button class="quick-action" data-feature="Card Controls" data-story="SCRUM #20 · SPRINT 3 | SCRUM #31 · SPRINT 3" id="cardsNav">
 <span class="action-icon">
 <svg viewbox="0 0 24 24">
 <rect height="14" rx="2" width="18" x="3" y="5">
@@ -113,8 +114,6 @@
         Cards
        </span>
 </button>
-
-
 </nav>
 <section aria-label="Monthly income and expenses" class="summary-grid">
 <button class="summary-card income-card" data-feature="Cumulative Income" data-story="SCRUM #19 · SPRINT 1">
@@ -158,9 +157,9 @@
         ›
        </span>
 </button>
-<div class="chart-legend" aria-label="Financial detail pages">
+<div aria-label="Financial detail pages" class="chart-legend">
 <a class="legend-button" href="income.html"><i class="legend-income"></i>Income</a>
-<button type="button" class="legend-button" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 1"><i class="legend-expense"></i>Expenses</button>
+<button class="legend-button" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 1" type="button"><i class="legend-expense"></i>Expenses</button>
 <a class="legend-button" href="investments.html"><i class="legend-investment"></i>Investments</a>
 </div>
 <div aria-label="Grouped monthly chart of income, expenses, and investment performance from January through April; illustrative values" class="chart">
@@ -220,28 +219,28 @@
         Goals
        </span>
 </a>
-<button class="bottom-item" data-feature="Investments &amp; Analytics" data-story="SCRUM #30 · SPRINT 2 | SCRUM #41 · SPRINT 4">
+<a class="bottom-item" href="insights.html">
 <span class="bottom-icon">
         ▥
        </span>
 <span>
         Insights
        </span>
-</button>
-<button class="bottom-item" id="shoppingButton" aria-label="Shopping">
+</a>
+<button aria-label="Shopping" class="bottom-item" id="shoppingButton">
 <span class="bottom-icon">
-        <svg viewBox="0 0 24 24" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1"/><circle cx="19" cy="20" r="1"/><path d="M2 3h2l2.6 12.3a2 2 0 0 0 2 1.7H19a2 2 0 0 0 2-1.6L23 7H5"/></svg>
-       </span>
+<svg aria-hidden="true" fill="none" height="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="25"><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle><path d="M2 3h2l2.6 12.3a2 2 0 0 0 2 1.7H19a2 2 0 0 0 2-1.6L23 7H5"></path></svg>
+</span>
 <span>
         Shopping
        </span>
 </button>
 </nav>
-
 <div class="home-indicator">
 </div>
-<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div class="lock-statusbar" aria-label="Phone status"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="images/saturn-logo.png"/><h2>Cosmic Cash is locked</h2><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
+<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div aria-label="Phone status" class="lock-statusbar"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="images/saturn-logo.png"/><h2>Cosmic Cash is locked</h2><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
 </section>
+<aside aria-label="Design evolution" class="design-history"><span>DESIGN EVOLUTION</span><h2>Where it started</h2><p>Original Home design</p><a href="images/home-original-prototype.png" rel="noopener" target="_blank"><img alt="Original Home design" src="images/home-original-prototype.png"/></a><p>Updated Home design</p><a href="images/home-team-design.png" rel="noopener" target="_blank"><img alt="Updated Home design" src="images/home-team-design.png"/></a><p>Select a snapshot to enlarge.</p></aside></div>
 <section class="feature-index">
 <div class="index-heading">
 <div>
@@ -261,56 +260,56 @@
 <h3>
        Account &amp; updates
       </h3>
-<button data-feature="App Notification Center" data-story="SCRUM #21 · SPRINT 2">
+<button data-feature="App Notification Center" data-route="notifications.html" data-story="SCRUM #21 · SPRINT 2" title="Open feature page">
        SCRUM #21 · App Notification Center
       </button>
 <button data-feature="Bill Due Date Reminders" data-story="SCRUM #24 · SPRINT 4">
        SCRUM #24 · Bill due date reminders
       </button>
-<button data-feature="Spending Limit Alerts" data-story="SCRUM #26 · SPRINT 2">
+<button data-feature="Spending Limit Alerts" data-route="spending-limit.html" title="Open feature page" data-story="SCRUM #26 · SPRINT 2">
        SCRUM #26 · Spending limit alerts
       </button>
-<button data-feature="Debt Risk Alerts" data-story="SCRUM #32 · SPRINT 3">
+<button data-feature="Debt Risk Alerts" data-route="debt-risk.html" title="Open feature page" data-story="SCRUM #32 · SPRINT 3">
        SCRUM #32 · Debt risk alerts
       </button>
-<button data-feature="User Account and Updates" data-story="SCRUM #16 · SPRINT 1">SCRUM #16 - User Account and Updates</button>
+<button data-feature="User Account and Updates" data-route="settings.html?tab=Account%20Login" data-story="SCRUM #16 · SPRINT 1" title="Open feature page">SCRUM #16 - User Account and Updates</button>
 <button data-feature="App Processing User Indication GIF" data-story="SCRUM #64 · SPRINT 4">SCRUM #64 - App Processing User Indication GIF</button>
 </article>
 <article class="feature-group">
 <h3>
        Security &amp; cards
       </h3>
-<button data-feature="Security &amp; 2FA Authentication" data-story="SCRUM #12 · SPRINT 1">
+<button data-feature="Security &amp; 2FA Authentication" data-route="settings.html?tab=Security" data-story="SCRUM #12 · SPRINT 1" title="Open feature page">
        SCRUM #12 · Security &amp; 2FA
       </button>
 <button data-feature="VPN Secure Data Transfer" data-story="SCRUM #15 · SPRINT 1">
        SCRUM #15 · VPN secure data transfer
       </button>
-<button data-feature="Database Management" data-story="SCRUM #38 · SPRINT 1">
+<button data-feature="Database Management" data-route="settings.html?tab=Database%20MGMT" data-story="SCRUM #38 · SPRINT 1" title="Open feature page">
        SCRUM #38 · Database management
       </button>
 <button data-feature="Credit Card Account Linking" data-story="SCRUM #40 · SPRINT 4">
        SCRUM #40 · Credit card account linking
       </button>
-<button data-feature="Freeze &amp; Unfreeze Credit" data-story="SCRUM #29 · SPRINT 3">
+<button data-feature="Freeze &amp; Unfreeze Credit" data-route="credit.html#freezeRows" data-story="SCRUM #29 · SPRINT 3" title="Open feature page">
        SCRUM #29 · Freeze / unfreeze credit
       </button>
-<button data-feature="App Lock Screen" data-story="SCRUM #63 · SPRINT 3">SCRUM #63 - App Lock Screen</button>
+<button data-feature="App Lock Screen" data-route="lock" data-story="SCRUM #63 · SPRINT 3" title="Open app lock screen">SCRUM #63 - App Lock Screen</button>
 </article>
 <article class="feature-group">
 <h3>
        Investments &amp; goals
       </h3>
-<button data-feature="Investment Accounts" data-story="SCRUM #14 · SPRINT 1">
+<button data-feature="Investment Accounts" data-route="link-investments.html" data-story="SCRUM #14 · SPRINT 1" title="Open feature page">
        SCRUM #14 · Investment accounts
       </button>
-<button data-feature="Investment AI Tool" data-story="SCRUM #33 · SPRINT 4">
+<button data-feature="Investment AI Tool" data-route="investments.html" data-story="SCRUM #33 · SPRINT 4" title="Open feature page">
        SCRUM #33 · Investment AI tool
       </button>
 <button data-feature="Annual Performance History" data-story="SCRUM #36 · SPRINT 4">
        SCRUM #36 · Annual performance history
       </button>
-<button data-feature="Financial Goal Setting" data-story="SCRUM #13 · SPRINT 2">
+<button data-feature="Financial Goal Setting" data-route="goals.html" data-story="SCRUM #13 · SPRINT 2" title="Open feature page">
        SCRUM #13 · Financial goal setting
       </button>
 <button data-feature="Savings &amp; Round Up" data-story="SCRUM #28 · SPRINT TBA">
@@ -321,37 +320,37 @@
 <h3>
        Money tools
       </h3>
-<button data-feature="Disposable Income Budget" data-story="SCRUM #25 · SPRINT 2">
+<button data-feature="Disposable Income Budget" data-route="budget.html" data-story="SCRUM #25 · SPRINT 2" title="Open feature page">
        SCRUM #25 · Disposable income budget
       </button>
-<button data-feature="Authorized Card Transactions" data-story="SCRUM #20 · SPRINT 3">
+<button data-feature="Authorized Card Transactions" data-route="authorizations.html" data-story="SCRUM #20 · SPRINT 3" title="Open feature page">
        SCRUM #20 · Authorized card transactions
       </button>
-<button data-feature="Turn Cards On or Off" data-story="SCRUM #31 · SPRINT 3">
+<button data-feature="Turn Cards On or Off" data-route="card-lock.html" data-story="SCRUM #31 · SPRINT 3" title="Open feature page">
        SCRUM #31 · Turn cards on or off
       </button>
-<button data-feature="Financial Knowledge Base" data-story="SCRUM #30 · SPRINT 2">
+<button data-feature="Financial Knowledge Base" data-route="insights.html" data-story="SCRUM #30 · SPRINT 2" title="Open feature page">
        SCRUM #30 · Financial knowledge base
       </button>
 <button data-feature="Audits &amp; Analytics" data-story="SCRUM #41 · SPRINT 4">
        SCRUM #41 · Audits &amp; analytics
       </button>
-<button data-feature="Credit Score" data-story="SCRUM #23 · SPRINT 4">SCRUM #23 - Credit Score</button>
+<button data-feature="Credit Score" data-route="credit.html" data-story="SCRUM #23 · SPRINT 4" title="Open feature page">SCRUM #23 - Credit Score</button>
 </article>
 <article class="feature-group">
 <h3>
        More &amp; support
       </h3>
-<button data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT 3">
+<button data-feature="Direct Bill Pay" data-route="bills.html" data-story="SCRUM #22 · SPRINT 3" title="Open feature page">
        SCRUM #22 · Direct bill pay
       </button>
-<button data-feature="Best Price Finder" data-story="SCRUM #34 · SPRINT 3">
+<button data-feature="Best Price Finder" data-route="price-finder.html" data-story="SCRUM #34 · SPRINT 3" title="Open feature page">
        SCRUM #34 · Best price finder
       </button>
 <button data-feature="Fetch Price via APIs" data-story="SCRUM #37 · SPRINT 3">
        SCRUM #37 · Fetch price via APIs
       </button>
-<button data-feature="Shopping Planner" data-story="SCRUM #35 · SPRINT 3">
+<button data-feature="Shopping Planner" data-route="shopping.html" data-story="SCRUM #35 · SPRINT 3" title="Open feature page">
        SCRUM #35 · Shopping planner
       </button>
 <button data-feature="Save Receipts &amp; Invoices" data-story="SCRUM #27 · SPRINT 4">
@@ -363,11 +362,10 @@
 </article>
 <article class="feature-group">
 <h3>Account Tools</h3>
-
-<button data-feature="Expenses" data-story="SCRUM #18 · SPRINT 1">SCRUM #18 - Expenses</button>
-<button data-feature="Income" data-story="SCRUM #19 · SPRINT 1">SCRUM #19 - Income</button>
-<button data-feature="Income vs Expence Data" data-story="SCRUM #17 · SPRINT 1">SCRUM #17 - Income vs Expence Data</button>
-<button data-feature="Money and Account Transfers" data-story="SCRUM #62 · SPRINT 3">SCRUM #62 - Money and Account Transfers</button>
+<button data-feature="Expenses" data-route="expenses.html" data-story="SCRUM #18 · SPRINT 1" title="Open feature page">SCRUM #18 - Expenses</button>
+<button data-feature="Income" data-route="income.html" data-story="SCRUM #19 · SPRINT 1" title="Open feature page">SCRUM #19 - Income</button>
+<button data-feature="Income vs Expence Data" data-route="overview.html" data-story="SCRUM #17 · SPRINT 1" title="Open feature page">SCRUM #17 - Income vs Expence Data</button>
+<button data-feature="Money and Account Transfers" data-route="transfer.html" data-story="SCRUM #62 · SPRINT 3" title="Open feature page">SCRUM #62 - Money and Account Transfers</button>
 </article>
 </div>
 <p class="note">
