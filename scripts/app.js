@@ -21,6 +21,10 @@ function openFeature(name, story) {
 
 document.querySelectorAll("[data-feature]").forEach(button => {
   button.addEventListener("click", () => {
+    if (["Cumulative Expenses", "Expenses"].includes(button.dataset.feature)) { window.location.href = "expenses.html"; return; }
+    if (button.classList.contains("analytics-heading")) { window.location.href = "overview.html"; return; }
+    if (button.dataset.feature === "Cumulative Income") { window.location.href = "income.html"; return; }
+    if (button.dataset.feature === "Transfer Money") { window.location.href = "transfer.html"; return; }
     if (button.id === "billPayNav") { window.location.href = "bills.html"; return; }
     if (button.id === "cardsNav") { window.location.href = "authorizations.html"; return; }
     openFeature(button.dataset.feature, button.dataset.story);
@@ -31,8 +35,7 @@ document.getElementById("notificationsButton").addEventListener("click", () =>
   openFeature("App Notification Center", "SCRUM #21 · SPRINT 2 | SCRUM #24 · SPRINT 4 | SCRUM #26 · SPRINT 2 | SCRUM #32 · SPRINT 3"));
 document.getElementById("settingsButton").addEventListener("click", () =>
   openFeature("Account & Updates", "SCRUM #16 · SPRINT 1 | SCRUM #12 · SPRINT 1 | SCRUM #15 · SPRINT 1 | SCRUM #38 · SPRINT 1 | SCRUM #39 · SPRINT 4"));
-document.getElementById("shoppingButton").addEventListener("click", () =>
-  openFeature("Shopping Planner", "SCRUM #35 · SPRINT 3 | SCRUM #34 · SPRINT 3 | SCRUM #37 · SPRINT 3 | SCRUM #27 · SPRINT 4"));
+document.getElementById("shoppingButton").addEventListener("click", () => { window.location.href = "shopping.html"; });
 document.getElementById("saturnButton").addEventListener("click", event => {
   event.preventDefault();
   openFeature("Cosmic Cash / Saturn", "SCRUM #40 · SPRINT 4 | SCRUM #64 · SPRINT 4");

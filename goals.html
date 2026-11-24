@@ -6,8 +6,8 @@
   <title>
    Cosmic Cash | Financial Goals
   </title>
-  <link href="styles.css" rel="stylesheet"/>
-  <link href="goals.css" rel="stylesheet"/>
+  <link href="styles/styles.css" rel="stylesheet"/>
+  <link href="styles/goals.css" rel="stylesheet"/>
  </head>
  <body>
   <main class="goal-wrap">
@@ -122,6 +122,18 @@
     <div class="goal-homebar">
     </div>
    </div>
+   <aside class="goal-history" aria-label="Financial Goals design history">
+    <div class="goal-history-heading">
+     <span class="goal-history-eyebrow">DESIGN EVOLUTION</span>
+     <h2>Where it started</h2>
+     <p>Our original black-and-white Financial Goals prototype.</p>
+    </div>
+    <a class="goal-history-image" href="images/goals-original-prototype.png" target="_blank" rel="noopener" aria-label="View the original Financial Goals prototype full size">
+     <img src="images/goals-original-prototype.png" alt="Original black-and-white Financial Goals prototype with a progress chart and Vacation and Emergency Fund cards" loading="lazy">
+    </a>
+    <div class="goal-history-foot"><span>Original prototype</span><span>Early wireframe</span></div>
+    <p class="goal-history-hint">Select the snapshot to view it larger.</p>
+   </aside>
   </main>
   <dialog id="goalDialog">
    <form id="goalForm" method="dialog">
@@ -155,7 +167,7 @@
   <p class="prototype-disclaimer">
    Demo values only · Goals added here are stored in this browser, not linked to financial accounts.
   </p>
-  <script src="goals.js">
+  <script src="scripts/goals.js">
   </script>
  </body>
 </html>

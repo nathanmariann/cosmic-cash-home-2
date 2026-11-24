@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="styles.css" rel="stylesheet"/>
+<link href="styles/styles.css" rel="stylesheet"/>
 </head>
 <body>
 <main class="stage">
@@ -39,7 +39,7 @@
 </div>
 <header class="app-header">
 <a aria-label="Saturn app information" class="brand" href="#home" id="saturnButton">
-<span aria-hidden="true" class="saturn-logo"><img alt="" class="saturn-art" src="saturn-logo.png"/></span>
+<span aria-hidden="true" class="saturn-logo"><img alt="" class="saturn-art" src="images/saturn-logo.png"/></span>
 <span>
         Cosmic Cash
        </span>
@@ -117,7 +117,7 @@
 
 </nav>
 <section aria-label="Monthly income and expenses" class="summary-grid">
-<button class="summary-card income-card" data-feature="Cumulative Income" data-story="SCRUM #19 · SPRINT 2">
+<button class="summary-card income-card" data-feature="Cumulative Income" data-story="SCRUM #19 · SPRINT 1">
 <span class="summary-label">
         This Month's
         <br/>
@@ -132,7 +132,7 @@
         </span>
 </span>
 </button>
-<button class="summary-card expense-card" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 2">
+<button class="summary-card expense-card" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 1">
 <span class="summary-label">
         This Month's
         <br/>
@@ -158,18 +158,11 @@
         ›
        </span>
 </button>
-<div class="chart-legend">
-<span>
-<i class="legend-income">
-</i>
-        Income
-       </span>
-<span>
-<i class="legend-expense">
-</i>
-        Expenses
-       </span>
-<span><i class="legend-investment"></i>Investment performance</span></div>
+<div class="chart-legend" aria-label="Financial detail pages">
+<a class="legend-button" href="income.html"><i class="legend-income"></i>Income</a>
+<button type="button" class="legend-button" data-feature="Cumulative Expenses" data-story="SCRUM #18 · SPRINT 1"><i class="legend-expense"></i>Expenses</button>
+<a class="legend-button" href="investments.html"><i class="legend-investment"></i>Investments</a>
+</div>
 <div aria-label="Grouped monthly chart of income, expenses, and investment performance from January through April; illustrative values" class="chart">
 <div class="chart-month">
 <div class="bar-pair">
@@ -247,7 +240,7 @@
 
 <div class="home-indicator">
 </div>
-<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div class="lock-statusbar" aria-label="Phone status"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="saturn-logo.png"/><h2>Cosmic Cash is locked</h2><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
+<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div class="lock-statusbar" aria-label="Phone status"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="images/saturn-logo.png"/><h2>Cosmic Cash is locked</h2><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
 </section>
 <section class="feature-index">
 <div class="index-heading">
@@ -371,8 +364,8 @@
 <article class="feature-group">
 <h3>Account Tools</h3>
 
-<button data-feature="Expenses" data-story="SCRUM #18 · SPRINT 2">SCRUM #18 - Expenses</button>
-<button data-feature="Income" data-story="SCRUM #19 · SPRINT 2">SCRUM #19 - Income</button>
+<button data-feature="Expenses" data-story="SCRUM #18 · SPRINT 1">SCRUM #18 - Expenses</button>
+<button data-feature="Income" data-story="SCRUM #19 · SPRINT 1">SCRUM #19 - Income</button>
 <button data-feature="Income vs Expence Data" data-story="SCRUM #17 · SPRINT 1">SCRUM #17 - Income vs Expence Data</button>
 <button data-feature="Money and Account Transfers" data-story="SCRUM #62 · SPRINT 3">SCRUM #62 - Money and Account Transfers</button>
 </article>
@@ -403,7 +396,7 @@
     </button>
 </section>
 </div>
-<script src="app.js">
+<script src="scripts/app.js">
 </script>
 </body>
 </html>

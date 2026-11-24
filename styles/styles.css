@@ -237,3 +237,9 @@ button{font:inherit}
 .lock-statusbar .wifi-icon::before,.lock-statusbar .wifi-icon::after{border-color:currentColor;}
 .lock-statusbar .battery-icon{border-color:currentColor;}
 .lock-statusbar .battery-icon i{background:currentColor;}
+
+/* v2.7: independently selectable chart legend controls */
+.chart-legend { flex-wrap: nowrap; gap: 5px; }
+.chart-legend .legend-button { display:flex; flex:1; align-items:center; justify-content:center; gap:4px; min-width:0; border:1px solid #e5def5; border-radius:7px; padding:3px 2px; background:#f8f6fd; color:#352657; font:inherit; text-decoration:none; white-space:nowrap; cursor:pointer; }
+.chart-legend .legend-button:hover { background:#eee7fc; border-color:#a995df; }
+.chart-legend .legend-button:focus-visible { outline:2px solid #6541c5; outline-offset:2px; }

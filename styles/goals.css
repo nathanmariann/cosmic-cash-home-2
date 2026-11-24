@@ -75,3 +75,16 @@ body {font-family:"DM Sans",Arial,sans-serif;color:var(--ink);background:radial-
 /* v2.2: Keep phone status visible while only page content scrolls. */
 .goal-statusbar{flex:none;width:100%;padding:0 26px;height:31px;}
 .goal-content{flex:1;min-height:0;overflow-y:auto;}
+
+/* v2.3: Optional design history sits outside the approved phone. */
+.goal-wrap{display:flex;align-items:flex-start;justify-content:center;gap:clamp(24px,5vw,64px);max-width:1100px;margin:0 auto;}
+.goal-phone{flex:0 0 auto;}
+.goal-history{width:270px;flex:0 1 270px;margin-top:50px;padding:17px;background:#fff;border:1px solid #e8e1f3;border-radius:18px;box-shadow:0 8px 25px rgba(44,29,82,.07);color:#34264e;}
+.goal-history-eyebrow{font-size:10px;font-weight:800;letter-spacing:1.5px;color:#7656bd;}
+.goal-history-heading h2{font-size:19px;margin:7px 0;}
+.goal-history-heading p{font-size:12px;line-height:1.5;color:#746b84;margin:0 0 14px;}
+.goal-history-image{display:block;overflow:hidden;border:1px solid #e6e1ed;border-radius:12px;background:#fafafa;}
+.goal-history-image img{display:block;width:100%;height:auto;}
+.goal-history-foot{display:flex;justify-content:space-between;gap:8px;margin-top:12px;font-size:11px;font-weight:700;color:#6a568e;}
+.goal-history-hint{font-size:11px;color:#81768f;margin:9px 0 0;}
+@media(max-width:720px){.goal-wrap{flex-direction:column;align-items:center;gap:16px}.goal-history{margin-top:0;width:min(390px,100%);flex:none}.goal-history-image{max-width:200px;margin:auto}}

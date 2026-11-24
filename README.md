@@ -1,3 +1,7 @@
+## Current project structure — v3.1
+
+HTML pages and index.html remain at the project root. CSS is in `styles/`, JavaScript in `scripts/`, and artwork and prototype snapshots in `images/`. Open the root folder in VS Code and launch index.html with Live Server. Older release notes below describe the historical flat structure.
+
 # Cosmic Cash — cleaned baseline (review copy)
 
 This is a conservative cleanup of the seven files you uploaded, not a redesign.
@@ -96,3 +100,32 @@ Only the Scrum detail cards below the phone were changed. Added #16 and #64 to A
 - Goals, Card Authorizations and Direct Bill Pay now keep the time, cellular signal, Wi-Fi and battery outside the scrolling content, fixed at the top of the phone.
 - The Home lock overlay also displays the matching status indicators with light contrast against the purple background.
 - No change to the approved navigation, cards, transaction data or phone frame.
+
+
+## v2.3 — Financial Goals design history
+- Added a small side snapshot of the original Financial Goals prototype (from the supplied one-page PDF).
+- Snapshot is an image outside the phone frame; clicking it opens the full image.
+- On narrow screens the history panel moves below the phone.
+- Approved Goals phone layout, chart, status bar, navigation and app logic unchanged.
+
+
+## v2.4 — SCRUM #35 Shopping Planner (Sprint 3)
+New shopping.html, shopping.css, shopping.js based on the team reference screenshot. Shopping navigation opens the planner. SCRUM #27 receipt saving and SCRUM #34/#37 price finder are clickable placeholder dialogs, not implemented pages. Sample purchase items can be added and stored locally. Approved existing pages retain their layouts.
+
+## v2.5
+SCRUM #62 Sprint 3: transfer.html, account and recipient transfer demos, confirmation and local activity.
+
+## v2.6
+Income (SCRUM #19, Sprint 1): sample deposit history, date filters, monthly graph, source totals, search, original wireframe. Open from Home Income card.
+
+### v2.7
+Home chart legend now has independent Income, Expenses and Investments controls. Income opens income.html; Expenses (#18) and Investments (#17) open feature previews until their pages are built. The original analytics heading retains its existing combined analytics preview.
+
+### v2.8 — Expenses (SCRUM #18 · Sprint 1)
+Expense overview, date filters, payment method chart, category insights and searchable demo transactions. Both original design snapshots are included. Home expense summary and chart legend link to expenses.html.
+
+## v2.9
+SCRUM #17 Sprint 1: financial overview (overview.html), linked from Home graph heading. Original and team snapshots included. Demo data matches Income and Expenses detail pages.
+
+## v3.0
+SCRUM #33 Sprint 4: Investments placeholder. SCRUM #14 Sprint 1: demo institution search, manual entry and local account nicknames. No actual institution connection or credentials. Original team slide included as snapshot.
