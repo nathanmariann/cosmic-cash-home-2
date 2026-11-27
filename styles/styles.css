@@ -136,7 +136,7 @@ button{font:inherit}
 .lock-nav svg{stroke-width:2.4;fill:#6e55d91a}
 .lock-screen[hidden]{display:none}
 .lock-screen{position:absolute;inset:0;z-index:12;background:linear-gradient(145deg,#39248d,#7656d4);display:grid;place-items:center;padding:24px;color:#fff;text-align:center}
-.lock-panel img{width:95px;height:95px;object-fit:contain}.lock-panel h2{font:800 22px Manrope,sans-serif;margin:12px 0}.lock-panel p{font-size:13px;opacity:.9}
+.lock-panel{width:100%;max-width:340px}.lock-panel img{display:block;width:100%;max-width:320px;height:auto;object-fit:contain;margin:0 auto 18px}.lock-panel h2{font:800 22px Manrope,sans-serif;margin:12px 0}.lock-panel p{font-size:13px;opacity:.9}
 .lock-panel button{margin:18px auto 12px;background:#fff;color:var(--purple-dark);border:0;border-radius:12px;padding:12px 24px;font-weight:800;cursor:pointer}
 .lock-panel small{display:block;font-size:10px;opacity:.7}
 @media(max-width:370px){.action-icon{width:43px;height:43px}.quick-action{font-size:9px}.analytics-title{font-size:10px}}
@@ -249,3 +249,7 @@ button{font:inherit}
 .feature-group button[data-route]::after{content:'›';position:absolute;right:2px;top:8px}
 .feature-group button[data-route]:hover{text-decoration:underline}
 .feature-group button:focus-visible{outline:2px solid #6540c9;outline-offset:2px}
+
+.saturn-art{mix-blend-mode:normal}
+
+.feature-group .feature-complete{border-top:1px solid #f0eef7;padding:8px 0;margin:0;color:#77758f;font-size:14px;line-height:1.4}

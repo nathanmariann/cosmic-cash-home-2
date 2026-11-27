@@ -41,10 +41,6 @@ document.querySelectorAll("[data-feature]").forEach(button => {
 document.getElementById("notificationsButton").addEventListener("click", () => { window.location.href = "notifications.html"; });
 document.getElementById("settingsButton").addEventListener("click", () => { window.location.href = "settings.html"; });
 document.getElementById("shoppingButton").addEventListener("click", () => { window.location.href = "shopping.html"; });
-document.getElementById("saturnButton").addEventListener("click", event => {
-  event.preventDefault();
-  openFeature("Cosmic Cash / Saturn", "SCRUM #40 · SPRINT 4 | SCRUM #64 · SPRINT 4");
-});
 const lockScreen = document.getElementById("lockScreen");
 const lockNav = document.getElementById("lockNav");
 const unlockButton = document.getElementById("unlockButton");

@@ -1,0 +1,19 @@
+/* Shared header controls — all authenticated pages */
+.app-header,.auth-header,.goal-header{display:flex;align-items:center;justify-content:space-between;gap:5px}
+.auth-header .auth-brand,.app-header .brand{min-width:0;flex:1;gap:5px}
+.auth-header .auth-brand img{flex-shrink:0;width:43px}
+.auth-header .auth-brand span{min-width:0}
+.auth-header .auth-brand small{font-size:9px;letter-spacing:.3px;overflow-wrap:anywhere}
+.goal-header h1{font-size:19px}.goal-header>div:not(.cc-header-actions){min-width:0;flex:1}
+.cc-header-actions{display:flex!important;align-items:center;justify-content:flex-end;gap:8px!important;flex:0 0 auto;margin-left:auto}
+.cc-header-actions .cc-header-icon{position:relative;display:flex;align-items:center;justify-content:center;box-sizing:border-box;width:32px;height:36px;padding:0;border:0;background:transparent;color:#252344;text-decoration:none;cursor:pointer;flex:none}
+.cc-header-actions .cc-header-icon svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.cc-header-actions .has-alert i{position:absolute;right:3px;top:5px;width:7px;height:7px;border-radius:50%;background:#ed5b79;border:1px solid white}
+.cc-header-icon:focus-visible{outline:2px solid #6540c9;outline-offset:2px;border-radius:6px}
+.session-locked .cc-header-actions{display:none!important}
+.cc-refresh-row{display:flex;justify-content:flex-end;margin:0 0 8px}.cc-refresh-row button{background:#eee8fa;color:#5135a9;border:1px solid #d8ccef;border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:12px}
+
+/* Punch list 3: development identifiers */
+.cc-scrum-label { color:#6540a8; font-size:11px; font-weight:700; letter-spacing:.055em; line-height:1.4; margin:4px 0 8px; }
+.phone-screen > .cc-scrum-label { text-align:center; }
+.cc-lock-scrum { color:#fff; font-size:11px; letter-spacing:.06em; }

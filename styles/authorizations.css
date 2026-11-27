@@ -6,3 +6,5 @@
 /* v2.2: Fixed status bar above the scrollable content on Cards and Bill Pay. */
 .auth-status{flex:none;width:100%;padding:0 26px;height:31px;}
 .auth-content{flex:1;min-height:0;overflow-y:auto;}
+
+.auth-brand img{mix-blend-mode:normal}

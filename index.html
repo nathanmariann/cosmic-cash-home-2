@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+<head><script src="scripts/session.js"></script><link href="styles/session.css" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Cosmic Cash mobile-first personal finance app home screen prototype" name="description"/>
 <title>
    Cosmic Cash | Home
   </title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <link href="styles/styles.css" rel="stylesheet"/>
 <link href="styles/design-history.css" rel="stylesheet"/>
-</head>
+<link href="styles/header-consistency.css" rel="stylesheet"/>
+</link><link href="styles/color-polish.css" rel="stylesheet"/><link rel="stylesheet" href="styles/test-corrections.css"/></head>
 <body>
 <main class="stage">
 <div class="stage-heading">
@@ -39,19 +40,14 @@
 <span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span>
 </div>
 <header class="app-header">
-<a aria-label="Saturn app information" class="brand" href="#home" id="saturnButton">
-<span aria-hidden="true" class="saturn-logo"><img alt="" class="saturn-art" src="images/saturn-logo.png"/></span>
+<a aria-label="Open Link and Share" class="brand" href="link-share.html" id="saturnButton">
+<span aria-hidden="true" class="saturn-logo"><img alt="" class="saturn-art" src="images/saturn-logo.gif"/></span>
 <span>
         Cosmic Cash
        </span>
 </a>
-<div class="header-actions">
-<button aria-label="Notifications" class="header-icon has-alert" id="notificationsButton" title="Notifications"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"></path><path d="M10 21h4"></path></svg><i></i></button>
-<button aria-label="Account and settings" class="header-icon" id="settingsButton" title="Account and settings">
-        ⚙
-       </button>
-</div>
-</header>
+<div class="header-actions cc-header-actions"><button aria-label="Notifications" class="header-icon cc-header-icon has-alert" id="notificationsButton" title="Notifications" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"></path></svg><i aria-hidden="true"></i></button><button aria-label="Settings" class="header-icon cc-header-icon" id="settingsButton" title="Settings" type="button"><svg aria-hidden="true" focusable="false" viewbox="0 0 24 24"><path d="M10 3h4l.6 2.5 1.8 1 2.5-.8 2 3.5-1.9 1.8v2l1.9 1.8-2 3.5-2.5-.8-1.8 1L14 21h-4l-.6-2.5-1.8-1-2.5.8-2-3.5L5 13v-2L3.1 9.2l2-3.5 2.5.8 1.8-1z"></path><circle cx="12" cy="12" r="3"></circle></svg></button></div>
+</header><div class="cc-scrum-label">HOME · MULTIPLE SCRUM ITEMS · SPRINTS 1–4</div>
 <section class="balance-card" id="home">
 <div class="balance-top">
 <span>Available Financial Balance</span>
@@ -62,7 +58,7 @@
 <div class="balance-amount">
        $47,000
       </div>
-<div class="balance-foot"><div class="balance-links"><button data-feature="Savings &amp; Round Up" data-story="SCRUM #28 · SPRINT TBA" type="button">Savings</button><span aria-hidden="true">·</span><button data-feature="Disposable Income Budget" data-story="SCRUM #25 · SPRINT 2" type="button">Budget</button></div>
+<div class="balance-foot"><div class="balance-links"><button data-feature="Savings &amp; Round Up" data-route="savings.html" data-story="SCRUM #28 · SPRINT 4" type="button">Savings</button><span aria-hidden="true">·</span><button data-feature="Disposable Income Budget" data-story="SCRUM #25 · SPRINT 2" type="button">Budget</button></div>
 <span class="balance-caption">
         Across your linked accounts
        </span>
@@ -72,16 +68,11 @@
 </section>
 <nav aria-label="Quick actions" class="quick-actions">
 <button class="quick-action" data-feature="Credit Score" data-story="SCRUM #23 · SPRINT 4 | SCRUM #29 · SPRINT 3">
-<span class="action-icon credit-score"><b>742</b></span>
+<span class="action-icon credit-score" id="ccHomeScore"><b>742</b></span>
 <span>Credit</span>
 </button>
 <button class="quick-action" data-feature="Direct Bill Pay" data-story="SCRUM #22 · SPRINT 3" id="billPayNav">
-<span class="action-icon">
-<svg viewbox="0 0 24 24">
-<path d="M4 11.5 12 4l8 7.5M6.5 10v9h11v-9M10 19v-5h4v5">
-</path>
-</svg>
-</span>
+<span class="action-icon"><img alt="" class="cc-action-art" src="images/cc-pay.svg"/></span>
 <span>
         Pay
         <br/>
@@ -89,12 +80,7 @@
        </span>
 </button>
 <button class="quick-action" data-feature="Transfer Money" data-story="SCRUM #62 · SPRINT 3">
-<span class="action-icon">
-<svg viewbox="0 0 24 24">
-<path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4">
-</path>
-</svg>
-</span>
+<span class="action-icon"><img alt="" class="cc-action-art" src="images/cc-transfer.svg"/></span>
 <span>
         Transfer
         <br/>
@@ -102,14 +88,7 @@
        </span>
 </button>
 <button class="quick-action" data-feature="Card Controls" data-story="SCRUM #20 · SPRINT 3 | SCRUM #31 · SPRINT 3" id="cardsNav">
-<span class="action-icon">
-<svg viewbox="0 0 24 24">
-<rect height="14" rx="2" width="18" x="3" y="5">
-</rect>
-<path d="M3 10h18m-14 5h4">
-</path>
-</svg>
-</span>
+<span class="action-icon"><img alt="" class="cc-action-art" src="images/cc-cards.svg"/></span>
 <span>
         Cards
        </span>
@@ -210,35 +189,14 @@
 </div>
 </section>
 <nav aria-label="Main navigation" class="bottom-nav">
-<button aria-label="Lock app" class="bottom-item lock-nav" id="lockNav" title="Lock app"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><rect height="11" rx="2" width="14" x="5" y="10"></rect><path d="M8 10V7a4 4 0 0 1 8 0v3"></path></svg><span>Lock</span></button>
-<a class="bottom-item" href="goals.html">
-<span class="bottom-icon">
-        ◎
-       </span>
-<span>
-        Goals
-       </span>
-</a>
-<a class="bottom-item" href="insights.html">
-<span class="bottom-icon">
-        ▥
-       </span>
-<span>
-        Insights
-       </span>
-</a>
-<button aria-label="Shopping" class="bottom-item" id="shoppingButton">
-<span class="bottom-icon">
-<svg aria-hidden="true" fill="none" height="25" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="25"><circle cx="9" cy="20" r="1"></circle><circle cx="19" cy="20" r="1"></circle><path d="M2 3h2l2.6 12.3a2 2 0 0 0 2 1.7H19a2 2 0 0 0 2-1.6L23 7H5"></path></svg>
-</span>
-<span>
-        Shopping
-       </span>
-</button>
+<button aria-label="Lock app" class="bottom-item lock-nav" id="lockNav" title="Lock app"><img alt="" class="cc-nav-art" src="images/cc-lock.svg"/><span>Lock</span></button>
+<a class="bottom-item" href="goals.html"><img alt="" class="cc-nav-art" src="images/cc-goals.svg"/><span>Goals</span></a>
+<a class="bottom-item" href="insights.html"><img alt="" class="cc-nav-art" src="images/cc-insights.svg"/><span>Insights</span></a>
+<button aria-label="Shopping" class="bottom-item" id="shoppingButton"><img alt="" class="cc-nav-art" src="images/cc-shopping.svg"/><span>Shopping</span></button>
 </nav>
 <div class="home-indicator">
 </div>
-<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div aria-label="Phone status" class="lock-statusbar"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="images/saturn-logo.png"/><h2>Cosmic Cash is locked</h2><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
+<div aria-label="App locked" aria-modal="true" class="lock-screen" hidden="" id="lockScreen" role="dialog"><div aria-label="Phone status" class="lock-statusbar"><span>9:41</span><span class="status-symbols"><span aria-label="Cellular signal" class="signal-icon"><i></i><i></i><i></i><i></i></span><span aria-label="Wi-Fi signal" class="wifi-icon"></span><span aria-label="Battery level" class="battery-icon"><i></i></span></span></div><div class="lock-panel"><img alt="" src="images/saturn-lock-smooth.webp"/><h2>Cosmic Cash is locked</h2><small class="cc-lock-scrum">SCRUM #63 · SPRINT 3</small><p>Your financial dashboard is hidden.</p><button id="unlockButton" type="button">Unlock demo</button><small>Prototype only — no real authentication</small></div></div></div>
 </section>
 <aside aria-label="Design evolution" class="design-history"><span>DESIGN EVOLUTION</span><h2>Where it started</h2><p>Original Home design</p><a href="images/home-original-prototype.png" rel="noopener" target="_blank"><img alt="Original Home design" src="images/home-original-prototype.png"/></a><p>Updated Home design</p><a href="images/home-team-design.png" rel="noopener" target="_blank"><img alt="Updated Home design" src="images/home-team-design.png"/></a><p>Select a snapshot to enlarge.</p></aside></div>
 <section class="feature-index">
@@ -263,17 +221,17 @@
 <button data-feature="App Notification Center" data-route="notifications.html" data-story="SCRUM #21 · SPRINT 2" title="Open feature page">
        SCRUM #21 · App Notification Center
       </button>
-<button data-feature="Bill Due Date Reminders" data-story="SCRUM #24 · SPRINT 4">
+<button data-feature="Bill Due Date Reminders" data-route="bill-reminders.html" data-story="SCRUM #24 · SPRINT 4">
        SCRUM #24 · Bill due date reminders
       </button>
-<button data-feature="Spending Limit Alerts" data-route="spending-limit.html" title="Open feature page" data-story="SCRUM #26 · SPRINT 2">
+<button data-feature="Spending Limit Alerts" data-route="spending-limit.html" data-story="SCRUM #26 · SPRINT 2" title="Open feature page">
        SCRUM #26 · Spending limit alerts
       </button>
-<button data-feature="Debt Risk Alerts" data-route="debt-risk.html" title="Open feature page" data-story="SCRUM #32 · SPRINT 3">
+<button data-feature="Debt Risk Alerts" data-route="debt-risk.html" data-story="SCRUM #32 · SPRINT 3" title="Open feature page">
        SCRUM #32 · Debt risk alerts
       </button>
 <button data-feature="User Account and Updates" data-route="settings.html?tab=Account%20Login" data-story="SCRUM #16 · SPRINT 1" title="Open feature page">SCRUM #16 - User Account and Updates</button>
-<button data-feature="App Processing User Indication GIF" data-story="SCRUM #64 · SPRINT 4">SCRUM #64 - App Processing User Indication GIF</button>
+<details class="feature-complete"><summary>SCRUM #64 · SPRINT 4 — Animated app-running indicator (implemented)</summary><p>The animated Saturn provides a visual indication of app activity. A stopped animation may indicate an interruption, but animation alone does not guarantee responsiveness.</p></details>
 </article>
 <article class="feature-group">
 <h3>
@@ -282,14 +240,14 @@
 <button data-feature="Security &amp; 2FA Authentication" data-route="settings.html?tab=Security" data-story="SCRUM #12 · SPRINT 1" title="Open feature page">
        SCRUM #12 · Security &amp; 2FA
       </button>
-<button data-feature="VPN Secure Data Transfer" data-story="SCRUM #15 · SPRINT 1">
+<button data-feature="VPN Secure Data Transfer" data-route="vpn.html" data-story="SCRUM #15 · SPRINT 1">
        SCRUM #15 · VPN secure data transfer
       </button>
 <button data-feature="Database Management" data-route="settings.html?tab=Database%20MGMT" data-story="SCRUM #38 · SPRINT 1" title="Open feature page">
        SCRUM #38 · Database management
       </button>
-<button data-feature="Credit Card Account Linking" data-story="SCRUM #40 · SPRINT 4">
-       SCRUM #40 · Credit card account linking
+<button data-feature="Link &amp; Share" data-route="link-share.html" data-story="SCRUM #40 · SPRINT 4">
+       SCRUM #40 · Link &amp; Share
       </button>
 <button data-feature="Freeze &amp; Unfreeze Credit" data-route="credit.html#freezeRows" data-story="SCRUM #29 · SPRINT 3" title="Open feature page">
        SCRUM #29 · Freeze / unfreeze credit
@@ -303,16 +261,16 @@
 <button data-feature="Investment Accounts" data-route="link-investments.html" data-story="SCRUM #14 · SPRINT 1" title="Open feature page">
        SCRUM #14 · Investment accounts
       </button>
-<button data-feature="Investment AI Tool" data-route="investments.html" data-story="SCRUM #33 · SPRINT 4" title="Open feature page">
+<button data-feature="Investment AI Tool" data-route="investment-ai.html" data-story="SCRUM #33 · SPRINT 4" title="Open feature page">
        SCRUM #33 · Investment AI tool
       </button>
-<button data-feature="Annual Performance History" data-story="SCRUM #36 · SPRINT 4">
+<button data-feature="Annual Performance History" data-route="annual-spending.html" data-story="SCRUM #36 · SPRINT 4">
        SCRUM #36 · Annual performance history
       </button>
 <button data-feature="Financial Goal Setting" data-route="goals.html" data-story="SCRUM #13 · SPRINT 2" title="Open feature page">
        SCRUM #13 · Financial goal setting
       </button>
-<button data-feature="Savings &amp; Round Up" data-story="SCRUM #28 · SPRINT TBA">
+<button data-feature="Savings &amp; Round Up" data-route="savings.html" data-story="SCRUM #28 · SPRINT 4">
        SCRUM #28 · Savings &amp; round up
       </button>
 </article>
@@ -353,10 +311,10 @@
 <button data-feature="Shopping Planner" data-route="shopping.html" data-story="SCRUM #35 · SPRINT 3" title="Open feature page">
        SCRUM #35 · Shopping planner
       </button>
-<button data-feature="Save Receipts &amp; Invoices" data-story="SCRUM #27 · SPRINT 4">
+<button data-feature="Save Receipts &amp; Invoices" data-route="receipts.html" data-story="SCRUM #27 · SPRINT 4">
        SCRUM #27 · Save receipts &amp; invoices
       </button>
-<button data-feature="Tech Support" data-story="SCRUM #39 · SPRINT 4">
+<button data-feature="Tech Support" data-route="support.html" data-story="SCRUM #39 · SPRINT 4">
        SCRUM #39 · Tech support
       </button>
 </article>
@@ -396,5 +354,5 @@
 </div>
 <script src="scripts/app.js">
 </script>
-</body>
+<script src="scripts/home-score-color.js"></script></body>
 </html>
